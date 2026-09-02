@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Project team 2 — Entrenamiento por métrica</title>
+<meta name="description" content="Entrenamiento por métrica para tutores del team 2. Acceso por correo.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+(function(){var t;try{t=localStorage.getItem('kl-theme')}catch(e){}
+if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+document.documentElement.setAttribute('data-theme',t);})();
+</script>
+</head>
+<body>
+
+<!-- ═══════════ LOGIN ═══════════ -->
+<div class="screen" id="screen-login">
+  <nav class="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">kodland</span><span class="logo-div"></span><span class="logo-sub">Matrix · Entrenamiento</span></a>
+    <div class="nav-r"><button class="tbtn" onclick="toggleTheme()">🌙</button></div>
+  </nav>
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="lgi">🚀</div>
+      <h1 id="lg-title"></h1>
+      <p class="lsub" id="lg-sub"></p>
+      <div class="login-err" id="login-err"></div>
+      <input class="login-input" id="email-input" type="email" autocomplete="email" spellcheck="false">
+      <button class="login-btn" onclick="tryLogin()" id="lg-btn"></button>
+      <p class="login-hint" id="lg-hint"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ DASHBOARD ═══════════ -->
+<div class="screen" id="screen-home">
+  <nav class="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">kodland</span><span class="logo-div"></span><span class="logo-sub">Matrix · Entrenamiento</span></a>
+    <div class="nav-r">
+      <div class="nav-user"></div>
+      <button class="pbtn" onclick="logout()" id="nb-logout"></button>
+      <button class="tbtn" onclick="toggleTheme()">🌙</button>
+    </div>
+  </nav>
+  <div class="hero"><div class="hero-inner">
+    <div class="eyebrow" id="h-eyebrow"></div>
+    <h1 id="h-title"></h1>
+    <p id="h-sub"></p>
+    <div class="prog-strip">
+      <span class="pnum" id="pnum">0/0</span>
+      <span class="ptrack"><span class="pfill" id="pfill" style="width:0%"></span></span>
+      <span class="plbl" id="plbl"></span>
+    </div>
+  </div></div>
+  <div class="msec" id="mgrid"></div>
+  <div class="mods-note" id="h-note"></div>
+  <footer id="ft"></footer>
+</div>
+
+<!-- ═══════════ MODULE CONTENT ═══════════ -->
+<div class="screen" id="screen-content">
+  <nav class="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">kodland</span><span class="logo-div"></span><span class="logo-sub">Matrix · Entrenamiento</span></a>
+    <div class="nav-r">
+      <button class="pbtn" onclick="goHome()" id="nb-back"></button>
+      <button class="tbtn" onclick="toggleTheme()">🌙</button>
+    </div>
+  </nav>
+  <div class="cbody" id="cbody"></div>
+  <footer id="ft2"></footer>
+</div>
+
+<!-- ═══════════ QUIZ ═══════════ -->
+<div class="screen" id="screen-quiz">
+  <nav class="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">kodland</span><span class="logo-div"></span><span class="logo-sub">Matrix · Entrenamiento</span></a>
+    <div class="nav-r">
+      <button class="pbtn" onclick="exitQuiz()" id="nb-exit"></button>
+      <button class="tbtn" onclick="toggleTheme()">🌙</button>
+    </div>
+  </nav>
+  <div class="qbody">
+    <div class="qpt"><div class="qpf" id="qpf"></div></div>
+    <div class="qctr" id="qctr"></div>
+    <div class="qtxt" id="qtxt"></div>
+    <div class="qopts" id="qopts"></div>
+    <div class="qfb" id="qfb"></div>
+    <button class="qnxt" id="qnxt" onclick="nextQ()"></button>
+  </div>
+</div>
+
+<!-- ═══════════ RESULTS ═══════════ -->
+<div class="screen" id="screen-results">
+  <nav class="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">kodland</span><span class="logo-div"></span><span class="logo-sub">Matrix · Entrenamiento</span></a>
+    <div class="nav-r">
+      <button class="pbtn" onclick="goHome()" id="nb-back2"></button>
+      <button class="tbtn" onclick="toggleTheme()">🌙</button>
+    </div>
+  </nav>
+  <div class="rbody" id="rbody"></div>
+</div>
+
+<!-- ═══════════ CERTIFICATE ═══════════ -->
+<div class="screen" id="screen-complete">
+  <nav class="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">kodland</span><span class="logo-div"></span><span class="logo-sub">Matrix · Entrenamiento</span></a>
+    <div class="nav-r">
+      <button class="pbtn" onclick="goHome()" id="nb-back3"></button>
+      <button class="tbtn" onclick="toggleTheme()">🌙</button>
+    </div>
+  </nav>
+  <div class="compbody" id="compbody"></div>
+</div>
+
+<script src="assets/tutors.js"></script>
+<script src="assets/content-es.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
