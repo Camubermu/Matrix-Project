@@ -121,7 +121,7 @@ courses: [
 /* ------------------------------------------------- ATTENDANCE */
 {
   id: 'm-attendance', kind: 'course', bit: 1, num: 'Métrica · Attendance', emoji: '📋', color: '#2B8EF0',
-  title: 'Blue attendance',
+  title: 'Asistencia',
   desc: 'Cómo se mide tu asistencia, qué hacer con el estudiante que falta, y cómo recuperar lo perdido antes de que se vuelva deserción.',
   meta: '5 preguntas · 70%',
   chips: ['📊 Cómo se mide', '📞 Protocolo de ausencia', '🔴 Estado crítico'],

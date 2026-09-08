@@ -289,7 +289,7 @@
     }
   }
 
-  function moduleCard(m, locked, lockNote) {
+  function moduleCard(m, locked, lockNote, idx) {
     var done = isPassed(m.id);
     var badge = done
       ? '<span class="badge bd">' + T.badgeDone + '</span>'
@@ -313,12 +313,17 @@
       chips += '</div>';
     }
     var note = locked && lockNote ? '<div class="mc-lock-note">🔒 ' + lockNote + '</div>' : '';
+    /* two-digit index (01, 02…) — this is a real position in the tutor's own
+       list of assigned metrics, not a decorative counter. */
+    var numStr = (idx + 1 < 10 ? '0' : '') + (idx + 1);
 
     return '<div class="mc' + (locked ? ' locked' : '') + (done ? ' done' : '') + '"' +
       (locked ? '' : ' onclick="openModule(\'' + m.id + '\')"') + '>' +
-      '<div class="mc-stripe" style="background:' + m.color + '"></div>' +
+      '<div class="mc-stripe" style="background:' + m.color + '">' +
+        '<span class="mc-idx">' + numStr + '</span><span class="mc-stripe-em">' + m.emoji + '</span>' +
+      '</div>' +
       '<div class="mc-body">' +
-        '<div class="mc-top"><span class="mc-num">' + esc(m.num) + '</span><span class="mc-em">' + m.emoji + '</span></div>' +
+        '<div class="mc-top"><span class="mc-num">' + esc(m.num) + '</span></div>' +
         '<div class="mc-title">' + esc(m.title) + '</div>' +
         '<div class="mc-desc">' + esc(m.desc) + '</div>' +
         chips + note +
@@ -352,7 +357,7 @@
       h += '<div class="grid">';
       for (i = 0; i < GENERAL.length; i++) {
         var locked = !isUnlocked(GENERAL[i]);
-        h += moduleCard(GENERAL[i], locked, locked ? T.lockPrev : '');
+        h += moduleCard(GENERAL[i], locked, locked ? T.lockPrev : '', i);
       }
       h += '</div>';
     }
@@ -368,7 +373,7 @@
       h += '<div class="grid">';
       for (i = 0; i < mine.length; i++) {
         var lk = !isUnlocked(mine[i]);
-        h += moduleCard(mine[i], lk, lk ? T.lockGeneral : '');
+        h += moduleCard(mine[i], lk, lk ? T.lockGeneral : '', i);
       }
       h += '</div>';
     }
