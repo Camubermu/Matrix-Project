@@ -513,9 +513,10 @@
           (c.cap ? '<div class="cap">' + c.cap + '</div>' : '') + '</div>';
 
       case 'video':
-        /* If `yt` (a YouTube video id) is set, use a lightweight thumbnail that
-           opens YouTube — same pattern as the Graphic Design training.
-           Otherwise play a local MP4 from `src`. */
+        /* Three ways to feed a video, picked by whichever field is set:
+           `yt`    → YouTube id, lightweight thumbnail that opens YouTube.
+           `drive` → Google Drive file id, played inline via Drive's own embeddable player.
+           `src`   → local MP4 file, played with the native <video> element. */
         if (c.yt) {
           return '<div class="card video-card"><h4><span class="h4-ic">🎬</span>' + c.h + '</h4>' +
             (c.p ? '<p>' + c.p + '</p>' : '') +
@@ -524,6 +525,11 @@
             '<span class="yt-play"></span></a>' +
             '<a class="video-link" href="https://www.youtube.com/watch?v=' + c.yt + '" target="_blank" rel="noopener">' +
             T.watchOnYouTube + '</a></div>';
+        }
+        if (c.drive) {
+          return '<div class="card video-card"><h4><span class="h4-ic">🎬</span>' + c.h + '</h4>' +
+            (c.p ? '<p>' + c.p + '</p>' : '') +
+            '<iframe src="https://drive.google.com/file/d/' + c.drive + '/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div>';
         }
         return '<div class="card"><h4><span class="h4-ic">🎬</span>' + c.h + '</h4>' +
           (c.p ? '<p>' + c.p + '</p>' : '') +

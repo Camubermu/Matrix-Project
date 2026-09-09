@@ -324,7 +324,14 @@ courses: [
       'Cuido la M1L1 como la clase más importante del curso',
       'Reviso CW y HW a tiempo, porque el atraso se paga en el Periodo 2',
       'Reporto los casos que no deberían contarme en contra (vacaciones, traslados internos, cambio de tutor)'
-    ]}
+    ]},
+
+    { type: 'divider' },
+    { type: 'h', ic: '🎬', t: 'Antes del quiz: repaso en video' },
+    { type: 'video',
+      h: 'Retención en la práctica',
+      p: 'Todo lo de arriba, explicado de corrido: los tres periodos, cómo leer dónde se te van los estudiantes y cómo trabajar el corte antes de que llegue. Míralo antes de hacer el quiz.',
+      drive: '1pjWncMsuTzHsQo1amiQbM1JpxQrp7_JE' }
   ],
 
   quiz: [
