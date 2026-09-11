@@ -509,6 +509,10 @@
         return t + '</tbody></table></div></div>';
 
       case 'img':
+        if (c.drive) {
+          return '<div class="figure"><iframe class="drive-embed" src="https://drive.google.com/file/d/' + c.drive + '/preview" loading="lazy" allowfullscreen></iframe>' +
+            (c.cap ? '<div class="cap">' + c.cap + '</div>' : '') + '</div>';
+        }
         return '<div class="figure"><img class="mod-img" src="' + c.src + '" alt="' + esc(c.alt || '') + '" loading="lazy">' +
           (c.cap ? '<div class="cap">' + c.cap + '</div>' : '') + '</div>';
 

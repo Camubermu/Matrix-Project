@@ -229,6 +229,7 @@ p{text-wrap:pretty}
 /* ============================================================ IMAGES & VIDEO */
 .mod-img{max-width:100%;border-radius:0;border:2px solid var(--line);margin:10px 0 12px;display:block}
 .video-card iframe{width:100%;aspect-ratio:16/9;border:none;border-radius:0;display:block;background:#000;margin-top:10px}
+.drive-embed{width:100%;aspect-ratio:4/3;border:2px solid var(--line);display:block;background:var(--surface)}
 .yt-lite{position:relative;display:block;width:100%;aspect-ratio:16/9;background-size:cover;background-position:center;border-radius:0;cursor:pointer;margin-top:10px;overflow:hidden;background-color:#000;border:2px solid var(--line)}
 .yt-lite:hover .yt-play{background:var(--pink-d);transform:translate(-50%,-50%) scale(1.06)}
 .yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:rgba(17,17,17,.9);border-radius:0;display:flex;align-items:center;justify-content:center;transition:all .15s;pointer-events:none}

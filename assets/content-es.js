@@ -508,9 +508,9 @@ courses: [
 {
   id: 'm-qa', kind: 'course', bit: 8, num: 'Métrica · QA', emoji: '🎓', color: '#A855F7',
   title: 'Calidad pedagógica (AutoQA)',
-  desc: 'Qué evalúa AutoQA, cómo se leen las bandas, y por qué esta es la única métrica que puede hundir tu rating por sí sola.',
+  desc: 'Qué evalúa AutoQA, cómo se leen las bandas, y la guía práctica para dar clases que hacen que el estudiante quiera volver.',
   meta: '5 preguntas · 70%',
-  chips: ['🤖 Cómo evalúa', '📉 La regla del Bad', '🎬 Grabaciones reales'],
+  chips: ['🤖 Cómo evalúa', '📉 La regla del Bad', '🥇 La regla de oro', '🎬 Grabaciones reales'],
   objective: 'Que sepas qué se está evaluando en cada una de tus clases, qué significa cada banda, y por qué esta métrica merece más atención que cualquier otra cuando está en riesgo.',
   cards: [
 
@@ -546,6 +546,120 @@ courses: [
     { type: 'text', p: 'Cuando se pierden estudiantes en el Periodo 1 de retención, lo primero que se revisa son <strong>las notas de AutoQA de las primeras clases</strong>. Ahí es donde suele estar la explicación.' },
     { type: 'text', p: 'La M1L1 es la clase que decide si el estudiante quiere volver. Tiene el peso más alto de todo el curso y es donde más rinde el esfuerzo: una M1L1 bien hecha te mejora QA y retención al tiempo.' },
 
+    { type: 'divider' },
+
+    { type: 'h', ic: '🥇', t: 'La guía para dar una clase Amazing' },
+    { type: 'quote', t: 'No enseñes para pasar QA. Enseña de una forma que haga que el estudiante quiera volver a tu próxima clase.' },
+    { type: 'text', p: 'Una clase Amazing no consiste en decir frases específicas ni en seguir un guión rígido. Es aquella en la que el estudiante se siente conectado, entiende qué va a aprender, participa, piensa, practica, recibe feedback, reconoce que aprendió y sabe qué viene después.' },
+
+    { type: 'h', ic: '🥇', t: 'La regla de oro' },
+    { type: 'text', p: 'Antes, durante y después de la clase, pregúntate esto — no al final del mes cuando revises tu número:' },
+    { type: 'iclist', items: [
+      { ic: '❤️', t: '<strong>¿Conecté?</strong> — ¿El estudiante sintió que estaba interactuando conmigo y no simplemente siguiendo una presentación?' },
+      { ic: '🧠', t: '<strong>¿Lo hice pensar?</strong> — ¿Le hice preguntas abiertas para que razonara, explicara y tomara decisiones?' },
+      { ic: '🛠️', t: '<strong>¿Lo hice hacer?</strong> — ¿Tuvo oportunidades reales de practicar y aplicar lo aprendido?' },
+      { ic: '💬', t: '<strong>¿Lo ayudé a mejorar?</strong> — ¿Mi feedback le permitió entender qué hizo bien y qué puede mejorar?' },
+      { ic: '🚀', t: '<strong>¿Le di continuidad?</strong> — ¿Terminó la clase sabiendo qué aprendió, qué tarea debe hacer en casa y qué aprenderá o hará en la próxima?' }
+    ]},
+
+    { type: 'h', ic: '👋', t: 'Saludo y calentamiento' },
+    { type: 'text', p: 'Busca generar un ambiente cómodo, cercano y positivo antes de entrar al contenido, para que el estudiante se sienta escuchado y motivado a participar.' },
+    { type: 'list', h: 'Qué debe hacer el tutor', items: [
+      'Saludar a los estudiantes',
+      'Preguntar cómo están',
+      'Hacer al menos una pregunta de conversación o interés personal',
+      'Generar un ambiente amigable antes de comenzar el contenido'
+    ]},
+    { type: 'twocol',
+      left: { ic: '✅', h: 'Mejor', items: ['“¡Hola, Mateo! ¿Cómo estás? ¿Qué tal estuvo tu semana?”'] },
+      right: { ic: '🚫', h: 'No es suficiente', items: ['“Hola chicos. ¿Me escuchan? Comencemos.”'] } },
+    { type: 'tip', t: 'No necesitas una conversación larga — unos segundos de interacción genuina son suficientes. Lo importante es que el estudiante perciba que el tutor está interesado en él.' },
+    { type: 'video', h: 'Saludo y calentamiento en acción', drive: '16v2upbocyyEfkNwWP9iDk4U5B72mZD2v' },
+
+    { type: 'h', ic: '🔁', t: 'Conectar con la clase anterior' },
+    { type: 'text', p: 'Conectar la clase actual con lo que los estudiantes hicieron o aprendieron antes ayuda a reforzar los conocimientos, activar lo que ya saben y prepararlos para los nuevos conceptos.' },
+    { type: 'list', h: 'Preguntas útiles', items: [
+      '¿Qué parte del proyecto creamos?',
+      '¿Para qué utilizamos esta herramienta?',
+      '¿Cuándo usarías esta herramienta?',
+      '¿Qué hicimos la última vez?'
+    ]},
+    { type: 'tip', t: 'Fomenta la participación con preguntas que no puedan responderse solo con un "sí" o "no". Haz la pregunta y dale tiempo al estudiante para pensar — no respondas tú por él.' },
+    { type: 'video', h: 'Conectar con la clase anterior en acción', drive: '18ZFbnIQN7IM4w0lsb_3gXAB0u3nMm-VO' },
+
+    { type: 'h', ic: '📓', t: 'Revisión de la tarea' },
+    { type: 'text', p: 'Revisar la tarea permite conocer el progreso de los estudiantes, resolver dudas, y relacionar lo trabajado en casa con los nuevos contenidos de la clase.' },
+    { type: 'list', h: 'Puedes preguntar', items: ['¿Tuviste algún problema?', '¿Qué cambiarías de lo que hiciste?'] },
+    { type: 'quote', t: '“Vi que terminaste tu personaje. Me gustó mucho cómo elegiste los colores y cómo organizaste los elementos. Para mejorarlo, podríamos trabajar un poco más en los detalles y en cómo hacer que el personaje se vea más completo. Hoy vamos a utilizar este personaje para crear la siguiente parte del proyecto.”', src: 'Ejemplo de feedback sobre la tarea' },
+    { type: 'tip', t: 'No se trata solo de comprobar si el estudiante hizo la tarea: aprovecha el momento para conectarla con la clase de hoy, reconocer sus logros y señalar también qué puede mejorar.' },
+    { type: 'text', p: 'Si el estudiante no hizo la tarea, no busques señalarlo ni hacerlo sentir mal. Mantén una actitud empática, invítalo a realizarla y explícale de forma sencilla cómo esa actividad le ayuda a practicar, reforzar lo aprendido y avanzar con más facilidad en las próximas clases.' },
+    { type: 'video', h: 'Revisión de tarea en acción', drive: '1qNqJXXcbe0vEEA_KP6PmoKfYNYfDKz-W' },
+
+    { type: 'h', ic: '🎯', t: 'Objetivo de la clase' },
+    { type: 'text', p: 'Explica de manera clara y sencilla qué aprenderán, practicarán, crearán o serán capaces de hacer durante la clase, para que el estudiante entienda el propósito de la sesión.' },
+    { type: 'hi', ic: '🧭', h: 'Fórmula sencilla', p: 'HOY VAMOS A + ACCIÓN + RESULTADO' },
+    { type: 'list', h: 'El estudiante debe entender', items: ['¿Qué voy a hacer?', '¿Qué voy a aprender?', '¿Para qué me sirve?'] },
+
+    { type: 'h', ic: '🧩', t: 'Instrucciones claras y por pasos' },
+    { type: 'text', p: 'Da instrucciones breves, claras y fáciles de seguir, adaptadas al nivel de los estudiantes.' },
+    { type: 'list', h: 'El estudiante debe entender', items: ['Qué tiene que hacer', 'Cómo tiene que hacerlo', 'Qué debe hacer primero', 'Qué debe hacer después'] },
+    { type: 'list', h: '¿Cómo dar buenas instrucciones?', items: [
+      'Usa un lenguaje sencillo, directo y adecuado para la edad',
+      'Adapta el lenguaje al nivel del estudiante, sin términos técnicos innecesarios',
+      'Cuando sea útil, usa ejemplos de la vida real o comparaciones conocidas'
+    ]},
+    { type: 'ba',
+      beforeLbl: 'Evita', before: '“Usaremos una condición.”',
+      afterLbl: 'Mejor', after: '“Si el personaje toca la moneda, ¿qué debería pasar?”' },
+    { type: 'warn', t: '<strong>Evita dar demasiadas instrucciones juntas.</strong> Por ejemplo: “Ahora creen una variable, conéctenla al bloque de puntuación, cambien el valor a 10, añadan el condicional y después hagan que aparezca el mensaje cuando el personaje toque la moneda.” El estudiante puede olvidar el primer paso antes de llegar al último.' },
+
+    { type: 'h', ic: '👥', t: 'Participación amplia' },
+    { type: 'text', p: 'Involucra a diferentes estudiantes durante la clase, sin depender solo de quienes participan de forma espontánea, para que todos tengan oportunidad de expresarse y demostrar lo que están aprendiendo.' },
+    { type: 'twocol',
+      left: { ic: '✅', h: 'Mejor', items: ['“Scarlett, ¿qué cambiarías?”', '“Alba, ¿estás de acuerdo? ¿Por qué?”', '“Martín, ¿qué podemos hacer en esta parte del proyecto?”'] },
+      right: { ic: '🚫', h: 'Evitar', items: ['“¿Alguien sabe?”'] } },
+
+    { type: 'h', ic: '💬', t: 'Feedback útil para el aprendizaje' },
+    { type: 'text', p: 'Da una retroalimentación que ayude al estudiante a mejorar su trabajo o comprensión. Elogiar es importante, pero siempre con un motivo concreto: qué hizo bien y qué puede mejorar.' },
+    { type: 'twocol',
+      left: { ic: '✅', h: 'Mejor', items: [
+        '“Muy bien. Utilizaste correctamente el condicional porque ahora el personaje solo pierde una vida cuando recibe daño. Ahora intenta agregar un mensaje cuando pierda la vida.”',
+        '“Me gustó cómo colocaste la fuente de luz. Ahora la sombra hace que el objeto tenga más volumen. Intenta modificar un poco su tamaño y observa qué ocurre.”',
+        '“Me gustó que probaras otra solución cuando la primera no funcionó.”'
+      ] },
+      right: { ic: '🚫', h: 'No basta con', items: ['“Muy bien”', '“Perfecto”', '“Excelente”'] } },
+    { type: 'tip', t: 'No elogies solamente el resultado. Reconoce también el proceso — por ejemplo, "Buena decisión experimentar con diferentes posiciones."' },
+
+    { type: 'h', ic: '🔍', t: 'Comprobar la comprensión' },
+    { type: 'text', p: 'No asumas que entendieron solo por preguntar "¿Entendiste?" o "¿Todo claro?" — no siempre demuestra comprensión, y puede hacer que el estudiante diga que sí aunque tenga dudas. Pide que expliquen, muestren, comparen, modifiquen o apliquen.' },
+    { type: 'list', h: 'Pregúntales', items: [
+      '¿Por qué utilizamos este bloque?',
+      '¿Qué crees que ocurrirá si cambiamos este número?',
+      'Muéstrame dónde lo colocarías',
+      '¿Cómo se lo explicarías a un amigo?'
+    ]},
+
+    { type: 'h', ic: '🏁', t: 'Cierre de la clase' },
+    { type: 'text', p: 'Al final es un buen momento para reflexionar sobre lo que hicieron y aprendieron. Deja que el estudiante responda — el tutor no debería hacer todo el resumen.' },
+    { type: 'list', h: 'Pregunta', items: [
+      '¿Qué aprendimos hoy?', '¿Qué conseguimos crear?', '¿Qué fue lo más fácil?', '¿Qué fue lo más difícil?', '¿Qué aprendiste hoy que antes no sabías?'
+    ]},
+    { type: 'hi', ic: '🧭', h: 'Idealmente el estudiante explica', p: 'QUÉ HIZO + QUÉ APRENDIÓ + PARA QUÉ SIRVE' },
+
+    { type: 'h', ic: '🏠', t: 'Tarea para la próxima clase' },
+    { type: 'text', p: 'Explica claramente qué deben hacer los estudiantes antes de la siguiente clase: la tarea o actividad, qué se espera que logren, y cómo pueden hacerlo.' },
+    { type: 'twocol',
+      left: { ic: '✅', h: 'Mejor', items: ['“Para la próxima clase termina la animación de tu personaje y prueba tres movimientos diferentes. Guarda el proyecto porque en la próxima clase vamos a utilizarlo para crear la siguiente parte del juego.”'] },
+      right: { ic: '🚫', h: 'Evitar', items: ['“No olviden hacer la tarea. En la plataforma está toda la información.”'] } },
+
+    { type: 'h', ic: '🔮', t: 'Continuidad de la próxima clase' },
+    { type: 'text', p: 'Explica qué aprenderán, construirán o practicarán en la siguiente clase, y genera curiosidad por lo que viene: qué materiales usarán, qué crearán o cómo lo harán.' },
+    { type: 'quote', t: '“La próxima clase vamos a utilizar nuestro personaje para crear los enemigos del juego.”', src: 'Ejemplo' },
+
+    { type: 'img', drive: '1V9HhbqJj39Ekiv2ORAyrrEPZOYefL_ki', alt: 'Checklist de la clase Amazing', cap: 'La checklist completa, de un vistazo.' },
+    { type: 'link', ic: '✅', t: 'Checklist interactivo para usar en vivo', d: 'Cronometra tu clase de 60 o 90 minutos y te va marcando estos puntos en tiempo real.', href: 'https://erazoandres.github.io/ListCheckTutor/' },
+
+    { type: 'divider' },
     { type: 'h', ic: '📈', t: 'Cómo se sube una métrica que se mueve despacio' },
     { type: 'steps', items: [
       { h: 'Encuentra tu punto débil, no todos', p: 'Pide la revisión de una grabación con tu TL y sal de ahí con un solo punto concreto para trabajar. Uno bien trabajado mueve el promedio más que cinco a medias.' },
@@ -555,12 +669,17 @@ courses: [
     ]},
 
     { type: 'h', ic: '✅', t: 'Tu checklist' },
-    { type: 'check', h: 'Para trabajar tu QA', items: [
-      'Sé cuál es mi punto débil concreto, no una idea general de "mejorar"',
-      'Vi al menos una grabación mía con mi TL y salí con una acción específica',
-      'Estoy aplicando ese cambio en todas las clases, no solo cuando me acuerdo',
-      'Preparo la M1L1 con más cuidado que cualquier otra lección',
-      'Entiendo que el número tarda en moverse porque promedia 90 días'
+    { type: 'check', h: 'Para dar una clase Amazing', items: [
+      'Saludé y generé un ambiente cercano antes de entrar al contenido',
+      'Conecté la clase con lo que hicimos antes y revisé la tarea sin hacer sentir mal a nadie',
+      'Dije el objetivo de la clase con la fórmula "hoy vamos a + acción + resultado"',
+      'Di instrucciones breves y por pasos, no todas juntas',
+      'Repartí la participación entre varios estudiantes, no solo los que hablan solos',
+      'Mi feedback explicó qué hizo bien y qué puede mejorar, no solo "muy bien"',
+      'Comprobé que entendieron pidiéndoles explicar o aplicar, no preguntando "¿todo claro?"',
+      'Cerré la clase dejando que el estudiante resumiera qué aprendió',
+      'Dejé tarea concreta y adelanté qué viene en la próxima clase',
+      'Sé cuál es mi punto débil concreto en AutoQA, no una idea general de "mejorar"'
     ]}
   ],
 
