@@ -20,6 +20,9 @@ document.documentElement.setAttribute('data-theme',t);})();
 <!-- cd "/Users/Camilo/Downloads/TL/LatAm/AyeSenior/Matrix Project"
 python3 tools/generate_tutors.py tutors.csv > assets/tutors.js -->
 
+<!-- ═══════════ LANGUAGE SWITCHER (flotante, visible en todas las pantallas) ═══════════ -->
+<div id="lang-switch"><div id="google_translate_element"></div></div>
+
 <!-- ═══════════ LOGIN ═══════════ -->
 <div class="screen" id="screen-login">
   <nav class="nav">
@@ -123,5 +126,28 @@ python3 tools/generate_tutors.py tutors.csv > assets/tutors.js -->
 <script src="assets/tutors.js"></script>
 <script src="assets/content-es.js"></script>
 <script src="assets/app.js"></script>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'es,en,ar,pt',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  /* Respaldo por si Google cambia el nombre de clase del banner superior:
+     lo oculta apenas aparece, sin depender solo del selector CSS. */
+  (function () {
+    var hide = function () {
+      document.querySelectorAll('iframe.skiptranslate').forEach(function (f) {
+        if (/\.container$/.test(f.id)) f.style.display = 'none';
+      });
+      document.body.style.top = '0px';
+    };
+    new MutationObserver(hide).observe(document.body, { childList: true, subtree: true });
+    hide();
+  })();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
